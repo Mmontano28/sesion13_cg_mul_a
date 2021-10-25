@@ -50,8 +50,9 @@ function init()
    
     Dim=16; //Valor la inicial del cubo
     Delta= Dim/2;//Valor el lado inicial del cubo dividido en 2
-    NewDelta=Math.sqrt(Math.pow(Delta,2)+Math.pow (Delta,2));//La variable New Delta es la diagonal es la variable que se usa para encontrar la longitud del centro del cubo, hacia el punto medio
-    Angulo=Math.PI/4;
+    Diagonal=Math.sqrt(Math.pow(Delta,2)+Math.pow (Delta,2));//La diagonal es la variable que se usa para encontrar la longitud del centro del cubo, hacia el punto medio
+    Angulo=Math.PI/16;//Variable que proporciona el angulo de rotacion.
+    NewDelta=(Math.cos((Math.PI/4)-Angulo))*Diagonal;//Variable que determina el valor de traslacion que debe presentar el cubo
 
     Cubo.push(cubo(Dim, Dim, Dim, 0xFFDD00, 'Basic', false));//Se crea el primer cubo
     Cubo.push(cubo(Dim, Dim, Dim, 0x6FA8DC, 'Phong', false));//Se crea el segundo cubo
