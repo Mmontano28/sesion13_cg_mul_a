@@ -50,7 +50,7 @@ function init()
    
     Dim=16; //Valor la inicial del cubo
     Delta= Dim/2;//Valor el lado inicial del cubo dividido en 2
-    Ang=Math.PI/4;
+    Angulo=Math.PI/4;
 
     Cubo.push(cubo(Dim, Dim, Dim, 0xFFDD00, 'Physical', false));//Se crea el primer cubo
     Cubo.push(cubo(Dim, Dim, Dim, 0x6FA8DC, 'Phong', false));//Se crea el segundo cubo
@@ -75,7 +75,7 @@ function init()
     {
         if(i==0 || i==2)
         {
-            Cubo[i].rotateY(Ang);
+            Cubo[i].rotateY(Angulo);
         }
     }
     
