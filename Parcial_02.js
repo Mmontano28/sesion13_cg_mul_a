@@ -1,7 +1,7 @@
 // Se crea una escena, que contendrá todos nuestros elementos como objetos, cámaras y luces.
 var scene = new THREE.Scene();
 
-function cubo(x, y, z, color, material, alambrado)
+function cubo(x, y, z, color, material, alambrado)//Funcion por la cual contiene todos los metodos para crear un cubo, con las varibales de tamaño, color, material y alambrado
 {
     var cubeGeometry = new THREE.BoxGeometry(x, y, z);
     var cubeMaterial;
@@ -62,7 +62,7 @@ function init()
     }   
     for(i=1;i<3;i++) //Este for solo se toman los valores de 1 y 2 cubos, por lo tanto se trasladan hacia arriba mientras que tambirn su tamaño se escala a la mitad
     {
-        Tamano=((1)/(Dim/(Delta/i)));//Varible para escalar el tamaño respeto al cubo indicado, es decir la mitad del cubo anterior.
+        Tamano=((1)/(Dim/(Delta/i)));//Varible para escalar el tamaño respeto al cubo indicado, es decir el valor de la mitad del cubo anterior.
         Altura=((Delta-2)*(1+i));//Altura Es una variable para cambiar la coordenada en y de los cubos. 
         Cubo[i].scale.set(Tamano,Tamano,Tamano); //Se escala las coordenas del cubo X,Y y Z que en este caso son la variable tamaño con un cambio pues se escala dos veces 
         Cubo[i].translateY(Altura);//El metodo que use fue el Metodo translate, con un parametro en este caso en la coordenada y 
