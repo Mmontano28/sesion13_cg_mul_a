@@ -50,18 +50,20 @@ function init()
    
     Dim=16; //Valor la inicial del cubo
     Delta= Dim/2;//Valor el lado inicial del cubo dividido en 2
+    Diagonal=Math.sqrt(Math.pow(Delta,2)+Math.pow (Delta,2));
+    NewDelta=Diagonal-Delta;
     Angulo=Math.PI/4;
 
-    Cubo.push(cubo(Dim, Dim, Dim, 0xFFDD00, 'Physical', false));//Se crea el primer cubo
+    Cubo.push(cubo(Dim, Dim, Dim, 0xFFDD00, 'Basic', false));//Se crea el primer cubo
     Cubo.push(cubo(Dim, Dim, Dim, 0x6FA8DC, 'Phong', false));//Se crea el segundo cubo
     Cubo.push(cubo(Dim, Dim, Dim, 0x0000FF, 'Basic', false));//Se crea el tercer cubo
     
   
     for(i=0;i<3;i++)//Este for sirve para transaladar los cubos al origen de las coordenadas, es decir, al lugar indicado, el valor de delta
     {
-         Cubo[i].translateX(Delta); //El metodo que use fue el Metodo translate 
-         Cubo[i].translateY(Delta); //El metodo que use fue el Metodo translate
-         Cubo[i].translateZ(Delta); //El metodo que use fue el Metodo translate
+         Cubo[i].translateX(NewDelta); //El metodo que use fue el Metodo translate 
+         Cubo[i].translateY(NewDelta); //El metodo que use fue el Metodo translate
+         Cubo[i].translateZ(NewDelta); //El metodo que use fue el Metodo translate
     } 
     
     for(i=1;i<3;i++) //Este for solo se toman los valores de 1 y 2 cubos, por lo tanto se trasladan hacia arriba mientras que tambirn su tamaño se escala a la mitad
