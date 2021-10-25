@@ -1,3 +1,4 @@
+// Se crea una escena, que contendrá todos nuestros elementos como objetos, cámaras y luces.
 var scene = new THREE.Scene();
 
 function cubo(x, y, z, color, material, alambrado)
@@ -30,10 +31,12 @@ function cubo(x, y, z, color, material, alambrado)
     return(cube);
 }
 function init()
+//Se crea una escena, que contendrá todos nuestros elementos como objetos, cámaras y luces.
+//Se crea una cámara, que define dónde estamos mirando.
  {
     var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    // create a render and set the size
+    // crea un render y establece el tamaño
     var renderer = new THREE.WebGLRenderer();
     renderer.setClearColor(new THREE.Color(0x000000));
     renderer.setSize(window.innerWidth, window.innerHeight);
